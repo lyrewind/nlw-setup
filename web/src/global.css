@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes glimmer {
+    0%, 100% {
+        @apply text-rose-50;
+    }
+    50% {
+        @apply text-rose-200;
+    }
+}
+
+@layer utilities {
+    .fullscreen {
+        @apply w-screen h-screen;
+    }
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+    .glimmer {
+        animation: glimmer 6s infinite linear;
+    }
+}
+
+@layer components {
+    .stylish-button {
+        @apply border border-rose-300 rounded-lg hover:bg-rose-300 hover:text-stone-900 focus:outline-none duration-500;
+    }
+}
